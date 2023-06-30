@@ -37,9 +37,7 @@ class MainActivity : AppCompatActivity() {
         val call: Call<JsonObject> = apiInterface.getData()
         call.enqueue(object : Callback<JsonObject> {
             override fun onResponse(call: Call<JsonObject>, response: Response<JsonObject>) {
-                Log.d("jsonObjectData", "objects.toString()")
                 if (response.isSuccessful) {
-                    Log.d("jsonObjectData", "objects.toString()2")
                     val objects = JSONObject(response.body().toString())
                     Log.d("jsonObjectData", objects.toString())
                     val model = HomeViewModel()
