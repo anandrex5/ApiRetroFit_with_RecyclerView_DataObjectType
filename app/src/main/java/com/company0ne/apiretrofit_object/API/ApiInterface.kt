@@ -7,6 +7,6 @@ import retrofit2.http.GET
 interface ApiInterface {
 
     @GET("posts/1")
-    fun getPosts(): Call<JsonObject>
+    fun getData(): Call<JsonObject>
 }
 
