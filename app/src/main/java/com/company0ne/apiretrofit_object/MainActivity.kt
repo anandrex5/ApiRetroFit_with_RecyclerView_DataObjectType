@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
     // This is for Object
     private fun retroFit() {
         val apiInterface = ApiClient.client.create(ApiInterface::class.java)
-        val call: Call<JsonObject> = apiInterface.getPosts()
+        val call: Call<JsonObject> = apiInterface.getData()
         call.enqueue(object : Callback<JsonObject> {
             override fun onResponse(call: Call<JsonObject>, response: Response<JsonObject>) {
                 Log.d("jsonObjectData", "objects.toString()")
